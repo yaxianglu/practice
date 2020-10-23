@@ -23,6 +23,11 @@ type AppProps = RouteComponentProps;
 const domain = "https://github.com/yaxianglu/practice/blob/master/src/pages";
 
 const App: FunctionComponent<AppProps> = (props) => {
+  console.info(123333);
+  const timeoutInstance = setTimeout(() => {
+    // resolve("2秒后执行成功");
+    console.info("3333333");
+  }, 2000);
   const [collapsed, toggle] = useState(false);
   const { location: { pathname } } = props;
   return (
@@ -108,7 +113,7 @@ function renderContent() {
         ...css_config,
         ...other_config,
       ].map(item => {
-        return (<Route path={item.path} component={item.component} />);
+        return (<Route key={item.path} path={item.path} component={item.component} />);
       })}
     </Switch>
   );
