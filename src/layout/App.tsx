@@ -16,12 +16,15 @@ import {
   OTHER_PATH, other_config,
 } from "../layout/router-config";
 import { Link, Route, withRouter, RouteComponentProps, Switch } from "react-router-dom";
-const { Sider, Content } = Layout;
+const { Sider, Content, Header } = Layout;
 const { SubMenu } = Menu;
 type AppProps = RouteComponentProps;
 
+const domain = "https://github.com/yaxianglu/practice/blob/master/src/pages";
+
 const App: FunctionComponent<AppProps> = (props) => {
   const [collapsed, toggle] = useState(false);
+  const { location: { pathname } } = props;
   return (
     <Layout style={{ width: "100%", height: "100%" }}>
       <Sider trigger={null} collapsible collapsed={collapsed}>
@@ -35,6 +38,9 @@ const App: FunctionComponent<AppProps> = (props) => {
         </Menu>
       </Sider>
       <Layout className="site-layout">
+        <Header>
+          <span style={{ color: "white" }}>代码地址: <span style={{ cursor: "pointer" }} onClick={() => { window.open(`${domain}${pathname}`) }}>{domain}{pathname}</span></span>
+        </Header>
         <Content
           className="site-layout-background"
           style={{
