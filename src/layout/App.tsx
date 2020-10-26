@@ -16,14 +16,12 @@ import {
   OTHER_PATH, other_config,
 } from "../layout/router-config";
 import { Link, Route, withRouter, RouteComponentProps, Switch, Redirect } from "react-router-dom";
+import { domain } from "../config";
 const { Sider, Content, Header } = Layout;
 const { SubMenu } = Menu;
 type AppProps = RouteComponentProps;
 
-const domain = "https://github.com/yaxianglu/practice/blob/master/src/pages";
-
 const App: FunctionComponent<AppProps> = (props) => {
-  console.info(123333);
   const timeoutInstance = setTimeout(() => {
     // resolve("2秒后执行成功");
     console.info("3333333");

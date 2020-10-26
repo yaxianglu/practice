@@ -1,5 +1,6 @@
 import { RouterConfig } from "../model/common";
 import Promise from "../pages/es/promise";
+import QA from "../pages/other/qa";
 
 export const ES_PATH = "/es";
 export const REACT_PATH = "/react";
@@ -19,5 +20,5 @@ export const css_config: RouterConfig[] = [
 ];
 
 export const other_config: RouterConfig[] = [
-  { path: `${OTHER_PATH}/promise`, name: "promise", component: Promise },
+  { path: `${OTHER_PATH}/QA`, name: "QA", component: QA },
 ];
