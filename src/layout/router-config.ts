@@ -20,5 +20,5 @@ export const css_config: RouterConfig[] = [
 ];
 
 export const other_config: RouterConfig[] = [
-  { path: `${OTHER_PATH}/QA`, name: "QA", component: QA },
+  { path: `${OTHER_PATH}/qa`, name: "qa", component: QA },
 ];

@@ -7,7 +7,7 @@ import { domain } from "../../../config";
  */
 const QA: FunctionComponent = () => {
   return (
-    <iframe src={`${domain}/other/QA/README.md`} title="qa" width="100%" height="100%" />
+    <iframe src={`${domain}/other/qa/README.md`} title="qa" width="100%" height="100%" />
   );
 }
 
