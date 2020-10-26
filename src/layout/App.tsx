@@ -15,7 +15,7 @@ import {
   CSS_PATH, css_config,
   OTHER_PATH, other_config,
 } from "../layout/router-config";
-import { Link, Route, withRouter, RouteComponentProps, Switch } from "react-router-dom";
+import { Link, Route, withRouter, RouteComponentProps, Switch, Redirect } from "react-router-dom";
 const { Sider, Content, Header } = Layout;
 const { SubMenu } = Menu;
 type AppProps = RouteComponentProps;
@@ -115,6 +115,7 @@ function renderContent() {
       ].map(item => {
         return (<Route key={item.path} path={item.path} component={item.component} />);
       })}
+      <Redirect to={es_config[0].path} exact from=""/>
     </Switch>
   );
 }
