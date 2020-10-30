@@ -38,11 +38,11 @@ ES6-Set研究
 ```
 
 3.Set的API  
->add(value):添加value值，如果已经有了，不会再添加。因为唯一性
->clear():清空，顾名思义
->delete(value):删除指定的值
->entries():返回一个新的迭代器对象，该对象包含Set对象中的按插入顺序排列的所有元素的值的[value, value]数组。为了使这个方法和Map对象保持相似， 每个值的键和值相等。(来自[MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Set/entries))
->has(value):检查有没有
+>add(value):添加value值，如果已经有了，不会再添加。因为唯一性  
+>clear():清空，顾名思义  
+>delete(value):删除指定的值  
+>entries():返回一个新的迭代器对象，该对象包含Set对象中的按插入顺序排列的所有元素的值的[value, value]数组。为了使这个方法和Map对象保持相似， 每个值的键和值相等。(来自[MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Set/entries))  
+>has(value):检查有没有  
 >values(): 返回一个新的迭代器对象，该对象包含Set对象中的按插入顺序排列的所有元素的值
 
 4.如何判断类型是Set？  
@@ -66,14 +66,14 @@ ES6-Set研究
   console.info(copySet);
   console.info(copySet == set, copySet === set);
 
-  // 方法二：利用new
+  // 方法二：利用new（有问题，请往后看）
   var set = new Set([444, 555, 666]);
   console.info(set);
   var copySet = new Set(set);
   console.info(copySet);
   console.info(copySet == set, copySet === set);
 
-  // 其他
+  // 其他（有问题，请往后看）
   var set = new Set([444, 555, 666]);
   var copySet = set.values();
   console.info(copySet == set, copySet === set);
@@ -90,5 +90,5 @@ ES6-Set研究
   console.info(copySet == set, copySet === set);
   obj.b = 44;
   console.info(set, copySet); // 自行查看结果。
-  // 所以，如何实现Set的深拷贝呢？
+  // 所以，如何实现Set的深拷贝呢？很显然，后面两种方式都是不对的。可以使用forEach遍历，过程中对value的值再进行深拷贝。就可以实现set的完全深拷贝了
 ```
