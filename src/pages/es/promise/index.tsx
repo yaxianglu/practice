@@ -15,6 +15,11 @@ const YPromise: FunctionComponent<YPromiseProps> = () => {
   return (
     <>
       {usePromise()}
+      <div>
+        <h1>1.Promise如何使用？</h1>
+        <h1>2.实现一个Promise</h1>
+        <h1>3.实现一个Promise.all</h1>
+      </div>
     </>
   );
 }
