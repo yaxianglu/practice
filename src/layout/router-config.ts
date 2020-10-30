@@ -1,5 +1,6 @@
 import { RouterConfig } from "../model/common";
 import Promise from "../pages/es/promise";
+import Interval from "../pages/es/interval";
 import QA from "../pages/other/qa";
 
 export const ES_PATH = "/es";
@@ -9,6 +10,7 @@ export const OTHER_PATH = "/other";
 
 export const es_config: RouterConfig[] = [
   { path: `${ES_PATH}/promise`, name: "promise", component: Promise },
+  { path: `${ES_PATH}/setTimeout-setInterval`, name: "实现setInterval和clearInterval", component: Interval },
 ];
 
 export const react_config: RouterConfig[] = [
