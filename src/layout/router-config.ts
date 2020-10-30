@@ -10,7 +10,7 @@ export const OTHER_PATH = "/other";
 
 export const es_config: RouterConfig[] = [
   { path: `${ES_PATH}/promise`, name: "promise", component: Promise },
-  { path: `${ES_PATH}/setTimeout-setInterval`, name: "实现setInterval和clearInterval", component: Interval },
+  { path: `${ES_PATH}/interval`, name: "实现setInterval和clearInterval", component: Interval },
 ];
 
 export const react_config: RouterConfig[] = [
