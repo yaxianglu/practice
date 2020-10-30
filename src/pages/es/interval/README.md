@@ -1,11 +1,11 @@
 实现 setInterval、clearInterval
 =================
 Q:
-  1.利用 setTimeout 实现 setInterval;
-  2.利用 clearTimeout 实现 clearInterval
+  1.利用 setTimeout 实现 setInterval;  
+  2.利用 clearTimeout 实现 clearInterval  
  A:
-  1.通过递归调用自身实现
-  2.难点是如何获取到最新的定时器setTimeout的id
+  1.通过递归调用自身实现  
+  2.难点是如何获取到最新的定时器setTimeout的id  
 ```javascript
   // 我的方法：
   function mySetInterval(callback, duration) {
