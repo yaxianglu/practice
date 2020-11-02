@@ -1,5 +1,6 @@
 import React, { FunctionComponent } from "react";
 import moment from "moment";
+import path from "path";
 
 interface YPromiseProps {}
 let count = 0;
@@ -26,6 +27,7 @@ const YPromise: FunctionComponent<YPromiseProps> = () => {
 
 /** 使用Promise */
 const usePromise = () =>  {
+    console.info(path, __dirname);
     console.info("进入这个方法");
     const myPromise = new Promise((resolve, reject) => {
     console.info("new 了一个");

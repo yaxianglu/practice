@@ -7,6 +7,9 @@ import YSet from "../pages/es/Set";
 /** qa */
 import QA from "../pages/other/qa";
 
+/** css */
+import YFlex from "../pages/css/flex";
+
 export const ES_PATH = "/es";
 export const REACT_PATH = "/react";
 export const CSS_PATH = "/css";
@@ -23,7 +26,7 @@ export const react_config: RouterConfig[] = [
 ];
 
 export const css_config: RouterConfig[] = [
-  { path: `${CSS_PATH}/promise`, name: "promise", component: YPromise },
+  { path: `${CSS_PATH}/flex`, name: "flex", component: YFlex },
 ];
 
 export const other_config: RouterConfig[] = [
