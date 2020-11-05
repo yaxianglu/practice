@@ -1,5 +1,5 @@
 import React, { FunctionComponent } from "react";
-import "./index.module.less";
+import "./index.less";
 /**
  * 测试flex
  * 尤其是flex-shrink是如何计算的
@@ -17,7 +17,6 @@ const YFlexShink: FunctionComponent = () => {
     <div className="parent">
       <div className="child-1">1</div>
       <div className="child-2">2</div>
-      <div className="child-3">3</div>
       <div className="child-3">3</div>
     </div>
   );
