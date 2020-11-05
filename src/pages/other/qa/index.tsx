@@ -8,6 +8,10 @@ const list = [
     title: "React.StrictMode模式下render里面setTimeout2次执行的问题（正常应该是1次）",
     path: "https://github.com/yaxianglu/practice/tree/master/src/pages/other/qa#1reactstrictmode%E6%A8%A1%E5%BC%8F%E4%B8%8Brender%E9%87%8C%E9%9D%A2settimeout2%E6%AC%A1%E6%89%A7%E8%A1%8C%E7%9A%84%E9%97%AE%E9%A2%98%E6%AD%A3%E5%B8%B8%E5%BA%94%E8%AF%A5%E6%98%AF1%E6%AC%A1",
   },
+  {
+    title: "使用less文件后，没有看到样式效果",
+    path: "",
+  },
 ];
 
 /**
