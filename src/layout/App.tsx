@@ -22,10 +22,6 @@ const { SubMenu } = Menu;
 type AppProps = RouteComponentProps;
 
 const App: FunctionComponent<AppProps> = (props) => {
-  const timeoutInstance = setTimeout(() => {
-    // resolve("2秒后执行成功");
-    console.info("3333333");
-  }, 2000);
   const [collapsed, toggle] = useState(false);
   const { location: { pathname } } = props;
   return (
