@@ -24,7 +24,6 @@ const YFlexShink: FunctionComponent = () => {
         <p>问</p>
         <p>1.flex-shrink 计算规则</p>
         <p>2.父子元素的 margin、padding、border 会对结果有影响吗?</p>
-        <p>3.box-sizing 的值会有影响吗？</p>
       </div>
       <br />
       <div>
@@ -41,6 +40,24 @@ const YFlexShink: FunctionComponent = () => {
         <p>第一个子元素：200 * (600 / 1000) = 120; 300 - 120 = 180; // 120是分配给它的压缩宽度，300是它自身basis的宽度。180是计算后的宽度</p>
         <p>第二个子元素：200 * (200 / 1000) = 40; 200 - 40 = 160; // 40是分配给它的压缩宽度，200是它自身basis的宽度。160是计算后的宽度</p>
         <p>第三个子元素：200 * (200 / 1000) = 40; 100 - 40 = 60; // 40是分配给它的压缩宽度，100是它自身basis的宽度。60是计算后的宽度</p>
+        <br />
+        <p>2.padding等影响</p>
+        <div className="parent-1">
+          <div className="child-4">230</div>
+          <div className="child-5">170</div>
+        </div>
+        <p><a href="https://www.w3.org/TR/css-flexbox-1/#line-sizing">line-sizing</a></p>
+        <p>和预想的一样吗？</p>
+        <p>我们可用看到其实计算主轴可以用长度的计算是要去除 margin, border, and padding 的</p>
+        <p>计算</p>
+        <p>400 - 50*2 - 20*2 = 260（可用空间）</p>
+        <p>flex-basis 为 0，flex-grow 都为 1；260*（1/2）= 130</p>
+        <p>130 + 20 + 20 = 170(真实空间)</p>
+        <p>结论：padding、margin等是固定的，可分配计算空间是减去这些值的情况下再计算分配的</p>
+        <p>这里需要知道可分配的空间是怎么计算的</p>
+        <br />
+        <br />
+        <br />
         <br />
       </div>
     </>
